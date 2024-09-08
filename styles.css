@@ -1,0 +1,97 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+    scroll-behavior: smooth; 
+} 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f1f1f1; 
+    color: #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ 
+.navbar-menu li {
+    margin-left: 20px;
+}
+
+.navbar-menu li a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.navbar-menu li a:hover {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #f1f1f1; 
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+
+    .navbar-menu li {
+        margin: 0;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+}
+
+.part {
+    height: calc(100vh - 1px); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; 
+}
+body {
+    background: linear-gradient(to bottom, #bcd9dd, #dbe9cc, #e2b6c5, #adeab2);
+    background-size: 100% 400%;
+    transition: background-position 1s ease; 
+}
+
+.content {
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    font-size: 100px;
+    text-align: center;
+    margin: 0;
+}
